@@ -1,0 +1,782 @@
+@import "../utilities/variables";
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: $paragraphFont;
+}
+
+.mainPageStuff{
+  width: 100vw;
+  height: 100vh;
+
+  // MOBLIE MENU STYLES ---------------------------------------------------------------
+  #navItemsContainer{
+    width:100%;
+    height: 60px;
+    background: $secondaryBlue;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+
+    // Nav Logos Styles
+    #navLogoWrapper{
+      height: 70%;
+      width: 50%;
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+
+      #navLogoImg{
+        margin-top: 2.5px; 
+        height: 100%;
+      }
+      #navLongLogoImg{
+        display: none;
+      }
+    }
+
+    // Desktop Nav Item Styles
+    .desk-nav-items{
+      display: none;
+    }
+  }
+
+  // PAGE MAIN CONTENT ---------------------------------------------------------------
+  .pageMainContent{
+    width: 100%;
+    height: 100%;
+
+    // LANDING PAGE STYLES ---------------------------------------------------------------
+    .landing-page-container{
+      height: 100%;
+      background: $secondaryBlue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      
+      // Hello Text Styles
+      .hello-text-wrapper{
+        padding-top: 60px;
+        width: 90%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+          .hello-text{
+            height: 90%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            h3{
+              margin: 10px 0 10px 0;
+              font-family: $headerFont;
+              font-size: 54px;
+              font-weight: $boldWeight;
+              color: white;
+              text-transform: uppercase;
+              text-align: center;
+            }
+
+            .hello{
+              color: $darkBlue;
+            }
+            .looking{
+              color: $mainBlue;
+            }
+            .designer-overlap{
+              .designer{
+                color: $yellow;
+                height: 60px;
+              }
+            }
+          }
+      }
+      .enjoy-wrapper{
+        width: 10%;
+        height: 10%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        bottom: 0;
+
+        .down-arrow{
+          color: $darkBlue;
+          font-size: 3em;
+          cursor: pointer;
+          margin-bottom: 10px;
+        }
+        .down-arrow:hover{
+          margin-bottom: 0;
+          color: $yellow;
+          transition: margin-bottom 200ms;
+          
+        }
+      }
+    }
+
+    // HOME PAGE PROJECTS GRID ---------------------------------------------------------------
+    .projects-grid-container{
+      width:100%;
+      
+      .project-grid-wrapper{
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .project-grid{
+          width: 50%;
+          position: relative;
+          .gridImg{
+            width: 100%;
+            display: block;
+          }
+          .project_hoverDescription{
+            position: absolute;
+            background:rgba(255, 255, 255, 0.96);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 15px;
+
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .3s, visibility .3s;
+
+            h3, p{
+              margin: 5px 2.5px;
+              text-align: center;
+            }
+            h3{
+              text-transform: uppercase;
+              font-size: 20px;
+              font-weight: $boldWeight;
+              font-family: $headerFont;
+              
+              color: $mainBlue;
+              letter-spacing: 0.2px
+            }
+          }
+        }
+        .project-grid:hover .project_hoverDescription {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  // FLIP CONTENT STYLES ---------------------------------------------------------------
+  
+  .flipBtnWrapper {
+      width: 100%;
+      transition: height 1s;
+      height: 250px;
+      position: relative;
+  }
+  .flipBtn,
+  .flipBtn_face {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+  }
+  .flipBtn_front {
+    backface-visibility: hidden;
+    transform:  translateZ( 10px );
+  }
+  .flipBtn_back {
+    transform:  translateZ( -10px );
+    transform: scaleX(-1);
+  }
+  .flipBtn {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+  } 
+
+  .flipBtn.clicked {
+    transform: rotateY( -180deg);
+  }
+  .flipBtnWrapper.flipped {
+      width: 100%;
+      transition: height 1s;
+      height: 930px;
+      position: relative;
+  }
+
+
+// ABOUT AND CONTACT ME SECTION ---------------------------------------------------------------
+.about_contact_section{
+    width: 100%;
+    background: #f4fdff;
+
+    // ABOUT ME SECTION
+    .aboutMe_container{
+      width: 100%;
+
+      .aboutMe_info{
+        width: 100%;
+
+        .aboutMe_front{
+          background: $lightBlue;
+          padding-bottom: 20px;
+          padding-top: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          h3{
+            font-weight: $semiBoldWeight;
+            text-align: center;
+            color: $darkBlue;
+            font-size: 28px;
+            font-family: $headerFont;
+            margin: 20px 0;
+          }
+          #flipButton{
+            width: 60%;
+            height: 55px;
+            background: $mainBlue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            padding-top: 2.5px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: $semiBoldWeight;
+            text-transform: uppercase;
+            font-size: 25px;
+            font-family: $headerFont;
+            letter-spacing: 0.5px;
+            border: none;
+            margin-bottom: 20px;
+          }
+        }
+
+        .aboutMe_back{
+          background: white;
+          padding-bottom: 20px;
+          padding-top: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          .aboutMe_image{
+            width: 30%;
+            max-width: 200px;
+            margin: 10px auto;
+            img{
+              border-radius: 50%;
+              width: 100%;
+            }
+          }
+          .about_textContent{
+            overflow: hidden;
+            width: 85%;
+            text-align: center;
+            p{
+              margin: 15px 0;
+            }
+            
+            .about_headParagraph{
+              color: $darkBlue;
+              font-weight: $mediumWeight;
+              letter-spacing: 0.25px;
+              font-size: 18px;
+              margin-bottom: 20px;
+            }
+            .about_bodyParagraph{
+              letter-spacing: 0.25px;
+              font-weight: $lightWeight;
+            }
+            .about_servicesList{ 
+              margin: 10px 0;
+              padding: 0;
+
+              li{
+                list-style-type: none;
+                margin: 5px 0;
+                color: $darkBlue;
+                font-weight: $mediumWeight;
+                letter-spacing: 0.25px;
+              }
+            }
+          }
+
+          #flipBack{
+            margin-top: 20px;
+            color: $mainBlue;
+            border: none;
+            background: transparent;
+          }
+        }
+
+      }
+    }
+    
+
+    // CONTACT ME CONTAINER
+    .contactMe_container{
+      width: 100%;
+      height: 100%;
+      background: $secondaryBlue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 25px 0;
+      padding-bottom: 25px;
+      margin-top: 40px;
+
+      h3{
+        font-weight: $semiBoldWeight;
+        text-align: center;
+        color: $darkBlue;
+        font-size: 28px;
+        font-family: $headerFont;
+        margin: 20px 0;
+      }
+
+      .contactMe_btn{
+        width: 60%;
+        height: 55px;
+        background: $mainBlue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        padding-top: 2.5px;
+
+          a{
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: $semiBoldWeight;
+            text-transform: uppercase;
+            font-size: 25px;
+            font-family: $headerFont;
+            letter-spacing: 0.5px;
+          }
+      }
+
+    }
+  }
+
+
+
+
+
+  // FOOTER STYLES ---------------------------------------------------------------
+  .footer{
+    width: 100%;
+    background: $secondaryBlue;
+    .footer-social-icons{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .footer-social-link{
+        width: 35px;
+        margin: 0 5px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+      }
+    }
+    .copyrightContainer{
+      padding: 5px 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $mainBlue;
+      h5{
+        margin: 0;
+        font-family: $paragraphFont;
+        font-weight: $lightWeight;
+        letter-spacing: 0.5px;
+        font-size: 12px;
+        color: white;;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// HAMBURGER STYLES ---------------------------------------------------------------
+#hamburgerMenuButton{
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  background: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 8px;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  // Toggle Change Hamburger Button to Hamburger Icon
+  #hamburgerLines{
+    height: 20px;
+    width: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    #line1,
+    #line2,
+    #line3{
+      background: $secondaryBlue;
+      width: 25px;
+      height: 4px;
+      border-radius: 5px;
+      transition: 300ms;
+    }
+  }
+  // Toggle Change Hamburger Button to X
+  #hamburgerLines.menuOpen{
+    justify-content: center;
+
+    #line1.menuOpen {
+      background: $charcoal;
+      transform: rotate(-45deg);
+      position: absolute;
+      transition: 300ms;
+    }
+    #line2.menuOpen {
+      display: none;
+      transition: 200ms;
+    }
+    #line3.menuOpen {
+      background: $charcoal;
+      transform: rotate(45deg);
+      position: absolute;
+      transition: 300ms;
+    }
+  }
+}
+
+
+// MENU OVERLAY STYLES ---------------------------------------------------------------
+#menuOverlayContainer{
+  display: none; 
+}
+
+#menuOverlayContainer.menuOpen{
+  display: block;
+  background: $charcoal;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  bottom: 0;
+  overflow: hidden;
+
+  .menu-logo-wrapper{
+    width: 65%;
+    opacity: 0.15;
+    .mobile-menu-img {
+      width: 100%;
+    }
+  }
+
+  // Menu Overlay Main Content
+  .mobile-menu-content{
+    position: absolute;
+    bottom: 0;
+    padding-left: 30px;
+
+    // Menu Overlay Nav Items
+    .mobile-menu-items{
+      font-family: $headerFont;
+      font-size: 60px;
+      font-weight: $semiBoldWeight;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li{
+        margin-top: 25px;
+        margin-bottom: 25px; 
+
+        .homeNavItem,
+        .projectsNavItem,
+        .aboutNavItem,
+        .contactNavItem{
+            text-decoration: none;
+            color: white;
+        }
+        // .onPage{
+        //   color: $yellow;
+        
+        // }
+        // .homeNavItem:hover{
+        //   color: $yellow;
+        // }
+        // .projectsNavItem:hover{
+        //   color: $yellow;
+        // }
+        // .aboutNavItem:hover{
+        //   color: $yellow;
+        // }
+        // .contactNavItem:hover{
+        //   color: $yellow;
+        // }
+      }
+    }
+
+    // Menu Overlay Social Icons
+    .mobile-social-icons{
+      height: 30px;
+      width: 70%;
+      margin-top: 25px;
+      margin-bottom: 25px; 
+
+      .social-link{
+          margin-right: 5px;
+          text-decoration: none;
+          .mobile-social-icon{
+              height: 100%;
+          }
+      }
+    }
+  }
+}
+
+
+// PROJECT MODAL POP STYLES ---------------------------------------------------------------
+#projectModalContainer{
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 4;
+  top : 0;
+  background: rgba(0, 0, 0, 0.65);
+
+  .projectModalContent{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: white;
+    overflow: auto;
+
+    #closeProjectButtonWrapper{
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 40px;
+      width: 100%;
+      z-index: 5;
+      background: rgba(141, 57, 57, 0.05);
+
+      #closeProjectBtn{
+        color: rgb(189, 189, 189); 
+        font-size: 22px;
+        margin: 10px 0 5px 10px;
+      }
+    }
+
+    // Project Slider Styles
+    .projectSlider{
+      width: 100%;
+      background: white;
+      .slider{
+        margin: 0;
+        width: 100%;
+        margin-bottom: 30px;
+        div{
+          width: 100%;
+          .slideVideoWrapper{
+            width: 100%;
+            min-height: 315px;
+            .sliderVideoContainer{
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+          .sliderImgWrapper{
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            #sliderImg{
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+        .slick-dots{
+          bottom: -30px;
+        }
+        .slick-dots li button:before{
+          font-family: 'slick';
+          font-size: 10px;
+          line-height: 20px;
+          color: #2ca8eb;
+        }
+        .slick-list.dragging{
+            cursor: pointer;
+            cursor: hand;
+        }
+        .slick-arrow{
+          z-index: 6;
+          width: 10%;
+          height: 30%;
+          background: rgba(235, 235, 235, 0.05);
+          border-radius: 5px; 
+          
+        }
+        .slick-prev{
+          left: 2.5px;
+
+        }
+        .slick-next{
+          right: 2.5px;
+        }
+        .slick-prev:before, .slick-next:before{
+          color: #2ca8eb!important;
+        }
+      }
+    }
+    
+    
+    // Mobile Project Header
+    .mobileProjectHeader{
+      margin-top: 40px;
+      height: auto;
+      width: 100%;
+      overflow: scroll;
+      .mobile_projectInfoHeader{
+        width: 95%;
+        margin: 5px auto;
+        
+        #mobile_projectName{
+          margin: 5px 0 0 0;
+          color: $mainBlue;
+          font-family: $headerFont;
+          font-weight: $boldWeight;
+          letter-spacing: 0.4px;
+          line-height: 1;
+          font-size: 32px;
+        }
+        #mobile_workType{
+          margin: 2.5px 0 0 0;
+          color: rgb(80, 80, 80);
+          font-weight: $mediumWeight;
+        }
+      }
+    }
+
+    .projectInfo{
+      width: 100%;
+      height: auto;
+      padding: 5px 0;
+      // Desktop Project Header
+      .deskProjectHeader{
+        display: none;
+      }
+    }
+
+    .project_collaborators{
+      width: 95%;
+      margin: 10px auto;
+      height: auto;
+
+      h3{
+        margin: 10px 0;
+        font-size: 20px;
+        font-weight: $semiBoldWeight;
+        color: $darkBlue;
+      }
+      .collaborator_link{
+        text-decoration: none;
+        .collaborator{
+          width: 95%;
+          display: flex;
+          flex-direction: row;
+          margin: 5px 10px;
+
+          .collaborator_img{
+            width: 10%;
+            max-width: 80px;
+            img{
+              width: 100%;
+              border-radius: 50%;
+            }
+          }
+          .collaborator_info{
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+            color: $charcoal;
+            h5{
+              margin: 0;
+              font-size: 16px;
+            }
+            .fa-external-link-alt{
+              margin: 0 5px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.projectInfoDescription{
+  width: 95%;
+  margin: 5px auto;
+  h3{
+    margin: 15px 0 5px 0;
+    font-size: 20px;
+    font-weight: $semiBoldWeight;
+    color: $darkBlue;
+  }
+  p{
+    margin: 5px 0 25px 0;
+  }
+}
+
+.vistSiteWrapper{
+  width: 95%;
+  height: 50px;
+  background: $mainBlue;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  #vistSiteBtn{
+    text-decoration: none;
+    color: white;
+    font-weight: $semiBoldWeight;
+  }
+}

@@ -1,0 +1,421 @@
+@import "../utilities/variables";
+
+// MEDIA QUERIES FOR HELLO TEXT
+// Lanscape short screen Hello text
+@media only screen and (max-height: 420px) {
+    // lanscape hello text
+    .hello-text{
+        align-items: center;
+        padding-bottom: 30px;
+        h3{
+            margin: 5px 5px 5px 5px !important;
+            font-size: 30px!important;
+        }
+        .helloIAmWrapper{
+            display: flex;
+            flex-direction: row;
+        }
+        .lookingForWrapper{
+            display: flex;
+            flex-direction: row;
+        }
+        .designer{
+            height: 35px!important;
+        }
+    }
+}
+// Iphone 6/7/8 height
+@media only screen and (min-height: 600px) {
+    .hello-text-wrapper{
+        .hello-text{
+            h3{
+                margin: 15px 0 15px 0!important;
+            }
+        }
+    }
+}
+
+// Iphone 6/7/8 Plus height
+@media only screen and (min-height: 700px) {
+    .hello-text-wrapper{
+        .hello-text{
+            h3{
+                margin: 20px 0 20px 0!important;
+            }
+        }
+    }
+}
+
+
+
+// NAVIGATION MENU MEDIA QUERIES
+// Ipad Width
+@media only screen and (min-width: 750px) {
+    // Hide Hamburger Menu
+    #hamburgerMenuButton{
+        display: none;
+    }
+    // Nav menu Items 
+    .desk-nav-items{
+        display: flex!important;
+        height: 60px;
+        margin: 0;
+        padding: 0;
+        margin-right: 5px;
+        align-items: center; 
+        justify-content: space-between;
+       
+        .navItem{
+            list-style-type: none;
+            margin: 0;
+            margin-right: 10px;
+            padding-top: 10px;
+            a{
+                font-family: $headerFont;
+                font-size: 16px;
+                font-weight: $mediumWeight;
+                text-decoration: none;
+                cursor: pointer;
+                color: white;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+
+// MENU OVERLAY MEDIA QUERIES
+@media only screen and (max-height: 420px) {
+
+    // landscape menu overlay
+    #menuOverlayContainer.menuOpen{
+        .menu-logo-wrapper{
+            float: right;
+            margin-top: 15px;
+            margin-right: 15px; 
+            .mobile-menu-img {
+                float: right;
+                width: 85%;
+            }
+        }
+        // Menu Overlay Main Content
+        .mobile-menu-content{
+            width: 35%;
+            // Menu Overlay Nav Items
+            .mobile-menu-items{
+                font-size: 40px!important;
+                li{
+                    margin-top: 12.5px;
+                    margin-bottom: 12.5px; 
+                }
+            }
+
+            // Menu Overlay Social Icons
+            .mobile-social-icons{
+                height: 30px;
+                width: 75%;
+                margin-top: 25px;
+                margin-bottom: 25px; 
+
+                .social-link{
+                    margin-right: 5px;
+                    text-decoration: none;
+                    .mobile-social-icon{
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// PROJECT GRID MEDIA QUERIES
+// Ipad and landscape phones project Grid
+@media only screen and (min-width: 600px) {
+    .projects-grid-container{
+      .project-grid-wrapper{
+        #weltecmoodle{
+            display: none;
+        } 
+        .project-grid{
+            width: 33.3%!important;
+        } 
+      }
+    }
+}
+
+// Desktop project Grid and About
+@media only screen and (min-width: 1030px) {
+    .projects-grid-container{
+      .project-grid-wrapper{
+          display: flex;
+        #weltecmoodle{
+            display: block;
+        } 
+        .project-grid{
+            width: 25%!important;
+        } 
+      }
+    }
+}
+
+
+
+// MEDIA QUERIES FOR ABOUT/CONTACT SECTION
+// larger Phones portrait about and contact
+@media only screen and (min-width: 350px) {
+    .flipBtnWrapper.flipped {
+      height: 830px!important;
+    }
+}
+
+// Ipad about and contact 
+@media only screen and (min-width: 700px) {
+    .flipBtnWrapper.flipped {
+      height: 780px!important;
+    }
+    .about_textContent{
+        width: 65%!important;
+    }
+
+     #flipButton{
+        width: 350px!important;
+    }
+    .contactMe_btn{
+        width: 350px!important;
+    }
+}
+
+// Anything bigger than 1024 about and contact 
+@media only screen and (min-width: 1024px) {
+    .flipBtnWrapper.flipped {
+      height: 810px!important;
+    }
+    .about_textContent{
+        width: 55%!important;
+    }
+}
+
+
+
+
+// MEDIA QUERIES FOR LARGER PHONES PORTRAIT FOR PROJECT MODAL
+// between iphone 6/7 up to plus portrait
+@media only screen and (min-width: 374px) and (max-width: 390px) {
+    .slideVideoWrapper{
+        min-height: 380px!important;
+    }
+}
+// between iphone plus up portrait
+@media only screen and (min-width: 391px) and (max-width: 420px) {
+    .slideVideoWrapper{
+        min-height: 415px!important;
+    }
+}
+// larger than iphone plus but smaller than ipad portrait
+@media only screen and (min-width: 421) and (max-width: 500px) {
+    .slideVideoWrapper{
+        min-height: 465px!important;
+    }
+}
+@media only screen and (min-width: 501) and (max-width: 560px) {
+    .slideVideoWrapper{
+        min-height: 530px!important;
+    }
+}
+
+// Landscape iphone 5/6/7/8
+@media only screen and (min-width:561px) {
+    // PROJECT MODAL POP STYLES ---------------------------------------------------------------
+    #projectModalContainer{
+        justify-content: center;
+        align-items: center;
+    }
+    .projectModalContentWrapper{
+        width: 85%;
+        height: 90%;
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        overflow: scroll;
+        align-items: center;
+    }
+
+    .projectModalContent{
+        height: 100%!important;
+        position: absolute!important;
+        width: 100%!important;
+    }
+
+    // Mobile Project Header
+    .mobileProjectHeader{
+        margin-top: 0px!important;
+    }
+
+    .slideVideoWrapper{
+        width: 100%;
+        min-height: 525px!important;
+        .sliderVideoContainer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+    }
+}
+
+
+// Landscape iphone 6/7/8 plus
+@media only screen and (min-width:670px) {
+
+    .projectModalContentWrapper{
+        width: 90%!important;
+    }
+    .projectModalContent{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    // Project Slider Styles
+    .projectSlider{
+        width: 58%!important;
+    }
+    .slider{
+        margin-bottom: 0!important;
+        overflow: hidden!important;//
+    }
+
+    .slideVideoWrapper{
+        width: 100%;
+        min-height: 375px!important;//
+    }
+
+    .slick-dots{
+        bottom: 10px!important;
+    }
+
+    // Mobile Project Header
+    .mobileProjectHeader{
+        display: none!important;
+    }
+
+    .projectInfo{
+        width: 90%!important;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    // Desktop Project Header
+    .deskProjectHeader{
+        display: block!important;
+        height: auto;
+        width: 100%;
+        margin: 10px 0!important;
+        .desk_projectInfoHeader{
+          width: 90%!important;
+          margin: 5px auto;
+          padding-bottom: 10px;
+          border-bottom: 0.5px solid $mainBlue;
+          
+          #desk_projectName{
+            margin: 5px 0 0 0;
+            color: $mainBlue;
+            font-family: $headerFont;
+            font-weight: $boldWeight;
+            letter-spacing: 0.4px;
+            line-height: 1;
+            font-size: 32px;
+          }
+          #desk_workType{
+            margin: 2.5px 0 0 0;
+            color: rgb(80, 80, 80);
+            font-weight: $mediumWeight;
+          }
+        }
+    }
+        
+    .project_collaborators{
+        display: none!important;
+    }
+
+    .projectInfoDescription{
+        width: 90%;
+        margin: 8px auto;
+        max-height: 165px!important;
+        overflow: scroll!important;
+        h3{
+            margin: 5px 0 5px 0!important;//
+            font-size: 20px;
+            font-weight: $semiBoldWeight;
+            color: $darkBlue;
+        }
+        p{
+            margin: 5px 0 10px 0!important;
+        }
+    }
+}
+
+
+
+// ipad
+@media only screen and (min-width:731px) {
+    .projectModalContentWrapper{
+        width: 90%!important;
+        max-height: 400px;
+    }
+}
+
+// 1024
+@media only screen and (min-width:1024px) {
+    .projectModalContentWrapper{
+        width: 90%!important;
+        max-height: 520px;
+    }
+    .projectInfo{
+        width: 85%!important;
+        height: auto;
+        padding: 15px 0;
+    }
+    .slideVideoWrapper{
+        width: 100%;
+        min-height: 510px!important;
+    }
+    .project_collaborators{
+        display: block!important;
+    }
+}
+
+// larger than 1100
+@media only screen and (min-width:1100px) {
+    .projectModalContentWrapper{
+        width: 75%!important;
+        max-height: 590px;
+    }
+    .projectInfo{
+        width: 85%!important;
+        height: auto;
+        padding: 15px 0;
+    }
+    .slideVideoWrapper{
+        width: 100%;
+        min-height: 570px!important;
+    }
+    .project_collaborators{
+        display: block!important;
+    }
+}
+
+
+// Landscape iphone X
+// @media only screen and (min-width:730px) {
+//     .projectModalContentWrapper{
+//         width: 82.5%!important;
+//     }
+//     .slideVideoWrapper{
+//         width: 100%;
+//         min-height: 370px!important;
+//     }
+// }

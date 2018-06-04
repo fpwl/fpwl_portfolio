@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+        <title>fpwl | Home</title>
+
+        <!-- STYLE SHEET AND CDNS -->
+        <!-- Google Font Links -->
+        <link href="https://fonts.googleapis.com/css?family=Asap:500,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600" rel="stylesheet">
+
+        <!-- Slick JS -->
+        <link rel="stylesheet" type="text/css" href="plugins/slick/slick.css" />
+        <link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css" />
+
+        <!-- Custom CSS -->
+        <!-- <link rel="stylesheet" href="css/style.css"/> -->
+        <link rel="stylesheet" href="css/style.min.css" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="favicon.png" />
+        <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    </head>
+
+    <body class="home" id="home">
+        <!-- Hamburger Toggle Icon -->
+        <div id="hamburgerMenuButton">
+            <div id="hamburgerLines">
+                <div id="line1"></div>
+                <div id="line2"></div>
+                <div id="line3"></div>
+            </div>
+        </div>
+
+        <!-- Main Page Stuff -->
+        <div class="mainPageStuff">
+            <!-- Nav Bar -->
+            <header id="navItemsContainer">
+                <!-- Nav Logo Images -->
+                <div id="navLogoWrapper">
+                    <a href="#"><img id="navLogoImg" src="img/logosAndIcons/fpwlLogo.png" alt="fpwl logo" /></a>
+                </div>
+            
+                <!-- Desktop Menu -->
+                <ul class="desk-nav-items">
+                    <li class="navItem">
+                        <a id="deskHomeNavItem" href="#home">HOME</a>
+                    </li>
+                    <li class="navItem">
+                        <a id="deskProjectsNavItem" href="#projectGridContainer">PROJECTS</a>
+                    </li>
+                    <li class="navItem">
+                        <a id="deskAboutNavItem" href="#aboutSection">ABOUT</a>
+                    </li>
+                    <li class="navItem">
+                        <a id="deskContactNavItem" href="#contactMeSection">CONTACT</a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Site Main Content -->
+            <main class="pageMainContent" id="pageMainContent">
+                <!-- Landing Page -->
+                <div class="landing-page-container" >
+                    <div class="hello-text-wrapper">
+                        <div class="hello-text">
+                            <div class="helloIAmWrapper">
+                                <div>
+                                    <h3 class="hello">hello!</h3>
+                                </div>
+                                <div>
+                                    <h3>i am the</h3>
+                                </div>
+                            </div>
+                            <div class="ghostTyperWrapper">
+                                <div class="designer-overlap">
+                                    <h3 class="designer">developer</h3>
+                                </div>
+                                <div>
+                                    <h3>you are</h3>
+                                </div>
+                            </div>
+                            <div class="lookingForWrapper">
+                                <div>
+                                    <h3 class="looking">looking</h3>
+                                </div>
+                                <div>
+                                    <h3>for!</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="enjoy-wrapper">
+                        <i class="fas fa-angle-down down-arrow" id="downArrow"></i>
+                    </div>
+                </div>
+                <!-- Project Grid -->
+                <div class="projects-grid-container" id="projectGridContainer">
+                    <div class="project-grid-wrapper" id="projectGridWrapper">      
+
+                    </div>
+                </div> 
+
+                <!-- About and contact section small screens-->
+                <div class="about_contact_section" id="aboutContactSection">
+                    <!-- About me -->
+                    <div class="aboutMe_container" id="aboutSection">
+                        <div class="aboutMe_info">
+                            <div class="flipBtnWrapper">
+                                <div class="flipBtn">
+                                    <div class="flipBtn_face flipBtn_front aboutMe_front">
+                                        <h3>Like my work? <br> but...</h3>
+                                        <button id="flipButton">Who Am I?</button>
+                                    </div>
+                                    <div class="flipBtn_face flipBtn_back aboutMe_back">
+                                        <div class="aboutMe_image">
+                                            <img src="img/contactImage.png" alt="Profile Image" />
+                                        </div>
+                                        <div class="about_textContent">
+                                            <p class="about_headParagraph">Hi! My name is Florence Lo and I am a multidisciplinary designer based in Wellington, New Zealand</p>
+                                            
+                                            <p class="about_bodyParagraph">I originally solely practiced graphic design but due to my increasing curiosty with the digital creative industry I had to
+                                            explore and find out more! From my studies and work experience I have had the opportunity to explore and develop skills in
+                                            multiple digital practices, which allowed me to approach client solutions multiple ways. 
+                                            </p>
+
+                                            <p class="about_bodyParagraph">The style of my work is predominantly vector based, therefore I am able to produce work which is clean, simple and comtemporary allowing for beautiful and effective designs.</p>
+                                            <p class="about_bodyParagraph">
+                                                As a multidisciplinary designer, I can provide creative solutions using various digital practices to fit your needs.
+                                            </p>
+                                            <ul class="about_servicesList">
+                                                <li>Graphic Design</li>
+                                                <li>Web Development</li>
+                                                <li>UX/UI Design</li>
+                                                <li>Vector Animation</li>
+                                                <li>Photography</li>
+                                            </ul>
+                                        </div>
+                                        <button id="flipBack">- Close -</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Me -->
+                    <div class="contactMe_container" id="contactMeSection">
+                        <h3>Interested in <br>working together? </h3>
+                        <div class="contactMe_btn"><a href="mailto:florence.lo@hotmail.com?Subject=" target="_top">Contact Me!</a></div>
+                    </div>
+    
+                </div>
+
+
+                <!-- Footer -->
+                <div class="footer">
+                    <div class="footer-social-icons">
+                        <a href="https://www.behance.net/fpwl" target="_blank" class="footer-social-link">
+                            <img src="img/logosAndIcons/behanceIcon.png" class="mobile-social-icon behance-icon" alt="behance icon" />
+                        </a>
+                        <a href="https://www.facebook.com/DesignsByFlorenceLo/" target="_blank" class="footer-social-link">
+                            <img src="img/logosAndIcons/facebookIcon.png" class="mobile-social-icon facebook-icon" alt="facebook icon" />
+                        </a>
+                        <a href="https://github.com/fpwl" target="_blank" class="footer-social-link">
+                            <img src="img/logosAndIcons/githubIcon.png" class="mobile-social-icon github-icon" alt="github icon" />
+                        </a>
+                        <a href="https://www.pinterest.nz/flolomojo/" target="_blank" class="footer-social-link">
+                            <img src="img/logosAndIcons/pinterestIcon.png" class="mobile-social-icon pinterest-icon" alt="pinterest icon" />
+                        </a>
+                    </div>
+                    <div class="copyrightContainer">
+                        <h5>&copy; Copyright Florence Pui Win Lo 2018</h5>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="menuOverlayContainer">
+            <div class="menu-logo-wrapper">
+                <img class="mobile-menu-img" src="img/logosAndIcons/grey_fpwlLogo.png" alt="fpwl logo" />
+            </div>
+            <div class="mobile-menu-content">
+                <ul class="mobile-menu-items">
+                    <li class="navItem">
+                        <a class="homeNavItem" id="homeNavItem" href="#">HOME</a>
+                    </li>
+                    <li class="navItem">
+                        <a class="projectsNavItem" id="projectsNavItem" href="#">PROJECTS</a>
+                    </li>
+                    <li class="navItem">
+                        <a class="aboutNavItem" id="aboutNavItem" href="#">ABOUT</a>
+                    </li>
+                    <li class="navItem">
+                        <a class="contactNavItem" id="contactNavItem" href="#">CONTACT</a>
+                    </li>
+                </ul>
+        
+                <hr>
+        
+                <div class="mobile-social-icons">
+                    <a href="https://www.behance.net/fpwl" target="_blank" class="social-link">
+                        <img src="img/logosAndIcons/behanceIcon.png" class="mobile-social-icon behance-icon" alt="behance icon" />
+                    </a>
+                    <a href="https://www.facebook.com/DesignsByFlorenceLo/" target="_blank" class="social-link">
+                        <img src="img/logosAndIcons/facebookIcon.png" class="mobile-social-icon facebook-icon" alt="facebook icon" />
+                    </a>
+                    <a href="https://github.com/fpwl" target="_blank" class="social-link">
+                        <img src="img/logosAndIcons/githubIcon.png" class="mobile-social-icon github-icon" alt="github icon" />
+                    </a>
+                    <a href="https://www.pinterest.nz/flolomojo/" target="_blank" class="social-link">
+                        <img src="img/logosAndIcons/pinterestIcon.png" class="mobile-social-icon pinterest-icon" alt="pinterest icon" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Modal -->
+        <div id="projectModalContainer">
+            <div class="projectModalContentWrapper">
+                <div class="projectModalContent">
+                    <div id="closeProjectButtonWrapper" aria-hidden="true">
+                        <i class="fas fa-times" id="closeProjectBtn" onclick="showProjectModal"></i>
+                    </div>
+                    
+                    <div class="mobileProjectHeader">
+                        <div class="mobile_projectInfoHeader">
+                            <h1 id="mobile_projectName">Project Name</h1>
+                            <h5 id="mobile_workType">work type</h4>
+                        </div>
+                    </div>
+
+                    <div class="projectSlider">
+                        <div class="slider">
+                            <!-- slide will append here from JS -->
+                        </div> 
+                    </div>
+
+                    <div class="projectInfo">
+                        <div class="deskProjectHeader">
+                            <div class="desk_projectInfoHeader">
+                                <h1 id="desk_projectName">Project Name</h1>
+                                <h5 id="desk_workType">work type</h4>             
+                            </div>
+                        </div>
+
+                        <div class="project_collaborators" id="projectCollaboratorsWrapper">
+                            <!-- Info will append here from JS -->
+                        </div>
+
+                        <div class="projectInfoDescription">
+                            <h3>About the Project:</h3>
+                            <p id="projectDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It
+                            has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It
+                            was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        
+                            <div class="vistSiteContainer">
+                                <!-- Info will append here from JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        <!-- jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Slick JS -->
+        <script defer src="plugins/slick/slick.min.js"></script>
+        <!-- Font Awesome -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <!-- Ghost Typer Pluging -->
+        <script src="plugins/ghost-typer/ghost-typer.min.js"></script>
+        <!-- Custom Script -->
+        <!-- <script src="js/project.js"></script>
+        <script src="js/custom.js"></script> -->
+        <script src="js/project.min.js"></script>
+        <script src="js/custom.min.js"></script>
+    </body>
+
+</html>
