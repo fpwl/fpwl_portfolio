@@ -6,7 +6,7 @@ var myProjects = {
             unique_id: "arofnc",
             work_type: 'Web and UX Design',
             description: "Aro Street Fish and Chip is a local fish chip shop in Aro Valley. This project's main goal was to give this local shop and new fresh design as well as to create a application that could make ordering food more efficient for both the customer and employees. This was a web application was create during my time at Yoobee School of design, therefore the app is not a live application.",
-            live_site: 'https://fpwl.github.io/AroStreetFishAndChipApp/',
+            live_site: 'http://florence.lo.yoobee.net.nz/AroStreetFishAndChips/',
             project_icon: './img/projects/web/arofnc/faviAro.png',
             imgs: [
                 './img/projects/web/arofnc/aro_1.png', './img/projects/web/arofnc/aro_2.png', './img/projects/web/arofnc/aro_3.png'
@@ -83,7 +83,7 @@ var myProjects = {
             unique_id: "behanceAPI",
             work_type: 'Web Development with API',
             description: "This project's focus was to grap data from Behance's API to create a dynamic website that loads new work when the API is updated. This was project was an assignment during my studies at Yoobee School of Design. I completed this project with two others; Carey Kwan and Kelsey Smith. The brief for this website was to create a website to showcase their designers and a collection of theirs work from Behance. We divided the project up between the three of us. I designed the overall design of the site but during development I focused on the homepage and the designers page.",
-            live_site: 'http://behance.careykwan.me/',
+            live_site: 'http://florence.lo.yoobee.net.nz/Behance_API/',
             collaborators: [
                 {
                     collab_name: 'Carey Kwan',
@@ -153,7 +153,7 @@ var myProjects = {
             unique_id: "drivePie",
             work_type: 'Web and UX Development',
             description: "DrivePie Web App is a was created during my time at Yoobee School of design.The idea behind the project was to create web app to help tourists coming to NZ to plan a  road trip.This app is based on the New Zealand movie 'Goodby Pork Pie', targeting the different places that was featured in the movie.",
-            live_site: 'https://fpwl.github.io/DrivePie_Application/',
+            live_site: 'http://florence.lo.yoobee.net.nz/DrivePie_Application/',
             project_icon: './img/projects/web/drivePie/drivepieFavi.png',
             imgs: [
                 './img/projects/web/drivePie/drivepie_1.png', './img/projects/web/drivePie/drivepie_2.png', 

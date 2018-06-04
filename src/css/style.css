@@ -434,7 +434,10 @@ body {
           width: 100%; }
           #projectModalContainer .projectModalContent .projectSlider .slider div .slideVideoWrapper {
             width: 100%;
-            min-height: 315px; }
+            min-height: 315px;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
             #projectModalContainer .projectModalContent .projectSlider .slider div .slideVideoWrapper .sliderVideoContainer {
               width: 100%;
               display: flex;
@@ -554,6 +557,8 @@ body {
   align-items: center;
   cursor: pointer; }
   .vistSiteWrapper #vistSiteBtn {
+    width: 100%;
+    text-align: center;
     text-decoration: none;
     color: white;
     font-weight: 600; }
